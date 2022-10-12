@@ -1,9 +1,8 @@
 ---
 name: Bug
-about: Template to create issues for bugs 
-title: '[Bug]'
-labels: QA
-assignees: 
+about: Report a bug in this project
+title: '[Bug] <describe issue>'
+labels: bug
 
 ---
 

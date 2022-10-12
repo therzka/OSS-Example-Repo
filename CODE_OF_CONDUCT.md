@@ -1,5 +1,10 @@
+# The CODE_OF_CONDUCT File
+
+This file should outline conduct policies for contributors and people interacting with this project.
+
 The following text is sourced from [contributor-covenant.org](https://www.contributor-covenant.org/)
 
+---
 
 # Contributor Covenant Code of Conduct
 

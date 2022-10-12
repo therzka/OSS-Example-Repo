@@ -2,12 +2,15 @@
 
 This is an example repository to illustrate different facets of documentation and the anatomy of an open source repo.  Find example README.md files and other README-related resources towards [the bottom of this file](#example-readmes-and-other-resources).
 
+Note that this repo can also be used as [a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) to create your own repository.
+
 ## Examples in this repo:
 - Community Health Files
     - [LICENSE.md](./LICENSE.md)
     - [CONTRIBUTING.md](./CONTRIBUTING.md)
     - [SUPPORT.md](./SUPPORT.md)
     - [SECURITY.md](./SECURITY.md)
+    - [CITATION.md](./CITATION.md)
 - Workflows
     - Open API
         - [linting and bundling](./.github/workflows/lint-api-docs.yml)

@@ -26,3 +26,8 @@ A non-exhaustive list of things you might want to include (or link out to):
 - https://gist.github.com/nayafia/contributing-template
 - https://gist.github.com/PurpleBooth/b24679402957c63ec426
 - https://github.com/nodejs/node/blob/main/CONTRIBUTING.md
+
+
+## Related GitHub Actions
+
+- [automatic-contrib-prs](https://github.com/marketplace/actions/automatic-contrib-prs) - open CONTRIBUTING.md file PRs for a set of repos
