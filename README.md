@@ -2,8 +2,13 @@
 
 This is an example repository to illustrate different facets of documentation and the anatomy of an open source repo.
 
-### Example READMEs
-[@PurpleBooth's Example README](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+### Example READMEs and Other Resources
+- https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md 
+- https://github.com/matiassingers/awesome-readme
+- [GitHub Docs: About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+
+
+The following is from [@PurpleBooth's Example README](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 
 ---
 
