@@ -1,4 +1,10 @@
-<sub>This example README was taken from @PurpleBooth's <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">gist</a></sub>
+# OSS-Example-Repo
+
+This is an example repository to illustrate different facets of documentation and the anatomy of an open source repo.
+
+Below is a README template taken from @PurpleBooth's very popular <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">gist</a>:
+
+---
 
 # Project Title
 
