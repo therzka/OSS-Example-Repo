@@ -1,6 +1,35 @@
-# OSS-Example-Repo
+# Example Open Source Repo
 
-This is an example repository to illustrate different facets of documentation and the anatomy of an open source repo.
+This is an example repository to illustrate different facets of documentation and the anatomy of an open source repo.  Find example README.md files and other README-related resources towards [the bottom of this file](#example-readmes-and-other-resources).
+
+## Examples in this repo:
+- Community Health Files
+    - [LICENSE.md](./LICENSE.md)
+    - [CONTRIBUTING.md](./CONTRIBUTING.md)
+    - [SUPPORT.md](./SUPPORT.md)
+    - [SECURITY.md](./SECURITY.md)
+- Workflows
+    - Open API
+        - [linting and bundling](./.github/workflows/lint-api-docs.yml)
+        - [deploying to github Pages](./.github/workflows/deploy-api-docs.yml)
+    - [Lint Workflows](./.github/workflows/lint-workflows.yml)
+- [Issue Templates](./.github/ISSUE_TEMPLATE/)
+- [Pull Request Templates](./.github/PULL_REQUEST_TEMPLATE/)
+
+---
+
+## About READMEs
+The README is the first thing a new contributor sees or reads when they encounter your project. It should contain an overview of your project and link to other places to learn about the project itself, its maintainers, and how contribution works. 
+
+### Make it pretty
+This file has the `.md` extension, which means we can write using [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), a special syntax for formatting our text.  You should utilize Markdown to organize, emphasize, and link to different parts of your documentation.  Markdown even has some [advanced features](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting), like flow charts:
+
+```mermaid
+flowchart LR
+  a[user visits repo] --> b[user reads README] --> c[user contributes!]
+```
+
+Since we're using Markdown and you're viewing this file on GitHub :octocat:, using headings (denoted with `#`) will automatically generate a table of contents for the README.md that exists at the root of your repository.
 
 ### Example READMEs and Other Resources
 - https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md 
