@@ -36,6 +36,9 @@ flowchart LR
 
 Since we're using Markdown and you're viewing this file on GitHub :octocat:, using headings (denoted with `#`) will automatically generate a table of contents for the README.md that exists at the root of your repository.
 
+![image](https://user-images.githubusercontent.com/7219923/195419357-33a211b8-fe7a-4ea0-b945-66ac1d2bdd39.png)
+
+
 ### Example READMEs and Other Resources
 - https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md 
 - https://github.com/matiassingers/awesome-readme
