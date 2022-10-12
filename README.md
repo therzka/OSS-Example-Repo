@@ -2,7 +2,8 @@
 
 This is an example repository to illustrate different facets of documentation and the anatomy of an open source repo.
 
-Below is a README template taken from @PurpleBooth's very popular <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">gist</a>:
+### Example READMEs
+[@PurpleBooth's Example README](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 
 ---
 
@@ -66,13 +67,11 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Links to technologies your project relies on
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
