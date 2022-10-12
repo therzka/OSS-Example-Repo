@@ -5,7 +5,8 @@ on:
   pull_request:
     paths:
       - 'openapi.yml'
-      - docs/api_docs/
+      - openapi/
+      - api-docs/
 
 permissions:
   contents: read

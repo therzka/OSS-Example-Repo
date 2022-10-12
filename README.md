@@ -1,250 +1,130 @@
-# test OpenAPI Definition
+# Example Open Source Repo
 
-## Working on your OpenAPI Definition
+This is an example repository to illustrate different facets of documentation and the anatomy of an open source repo.  Find example README.md files and other README-related resources towards [the bottom of this file](#example-readmes-and-other-resources).
 
-### Install
+## Examples in this repo:
+- Community Health Files
+    - [LICENSE.md](./LICENSE.md)
+    - [CONTRIBUTING.md](./CONTRIBUTING.md)
+    - [SUPPORT.md](./SUPPORT.md)
+    - [SECURITY.md](./SECURITY.md)
+- Workflows
+    - Open API
+        - [linting and bundling](./.github/workflows/lint-api-docs.yml)
+        - [deploying to github Pages](./.github/workflows/deploy-api-docs.yml)
+    - [Lint Workflows](./.github/workflows/lint-workflows.yml)
+- [Issue Templates](./.github/ISSUE_TEMPLATE/)
+- [Pull Request Templates](./.github/PULL_REQUEST_TEMPLATE/)
+- OpenAPI
+    - the OpenAPI examples in this repo were generated using Redocly's [create-openapi-repo](https://github.com/Redocly/create-openapi-repo)
 
-1. Install [Node JS](https://nodejs.org/).
-2. Clone this repo and run `npm install` in the repo root.
+---
 
-### Usage
+## About READMEs
+The README is the first thing a new contributor sees or reads when they encounter your project. It should contain an overview of your project and link to other places to learn about the project itself, its maintainers, and how contribution works. 
 
-#### `npm start`
-Starts the reference docs preview server.
+### Make it pretty
+This file has the `.md` extension, which means we can write using [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), a special syntax for formatting our text.  You should utilize Markdown to organize, emphasize, and link to different parts of your documentation.  Markdown even has some [advanced features](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting), like flow charts:
 
-#### `npm run build`
-Bundles the definition to the dist folder.
-
-#### `npm test`
-Validates the definition.
-
-## Contribution Guide
-
-Below is a sample contribution guide. The tools
-in the repository don't restrict you to any
-specific structure. Adjust the contribution guide
-to match your own structure. However, if you
-don't have a structure in mind, this is a
-good place to start.
-
-Update this contribution guide if you
-adjust the file/folder organization.
-
-The `.redocly.yaml` controls settings for various
-tools including the lint tool and the reference
-docs engine.  Open it to find examples and
-[read the docs](https://redoc.ly/docs/cli/configuration/)
-for more information.
-
-
-### Schemas
-
-#### Adding Schemas
-
-1. Navigate to the `openapi/components/schemas` folder.
-2. Add a file named as you wish to name the schema.
-3. Define the schema.
-4. Refer to the schema using the `$ref` (see example below).
-
-##### Example Schema
-This is a very simple schema example:
-```yaml
-type: string
-description: The resource ID. Defaults to UUID v4
-maxLength: 50
-example: 4f6cf35x-2c4y-483z-a0a9-158621f77a21
-```
-This is a more complex schema example:
-```yaml
-type: object
-properties:
-  id:
-    description: The customer identifier string
-    readOnly: true
-    allOf:
-      - $ref: ./ResourceId.yaml
-  websiteId:
-    description: The website's ID
-    allOf:
-      - $ref: ./ResourceId.yaml
-  paymentToken:
-    type: string
-    writeOnly: true
-    description: |
-      A write-only payment token; if supplied, it will be converted into a
-      payment instrument and be set as the `defaultPaymentInstrument`. The
-      value of this property will override the `defaultPaymentInstrument`
-      in the case that both are supplied. The token may only be used once
-      before it is expired.
-  defaultPaymentInstrument:
-    $ref: ./PaymentInstrument.yaml
-  createdTime:
-    description: The customer created time
-    allOf:
-      - $ref: ./ServerTimestamp.yaml
-  updatedTime:
-    description: The customer updated time
-    allOf:
-      - $ref: ./ServerTimestamp.yaml
-  tags:
-    description: A list of customer's tags
-    readOnly: true
-    type: array
-    items:
-      $ref: ./Tags/Tag.yaml
-  revision:
-    description: >
-      The number of times the customer data has been modified.
-
-      The revision is useful when analyzing webhook data to determine if the
-      change takes precedence over the current representation.
-    type: integer
-    readOnly: true
-  _links:
-    type: array
-    description: The links related to resource
-    readOnly: true
-    minItems: 3
-    items:
-      anyOf:
-        - $ref: ./Links/SelfLink.yaml
-        - $ref: ./Links/NotesLink.yaml
-        - $ref: ./Links/DefaultPaymentInstrumentLink.yaml
-        - $ref: ./Links/LeadSourceLink.yaml
-        - $ref: ./Links/WebsiteLink.yaml
-  _embedded:
-    type: array
-    description: >-
-      Any embedded objects available that are requested by the `expand`
-      querystring parameter.
-    readOnly: true
-    minItems: 1
-    items:
-      anyOf:
-        - $ref: ./Embeds/LeadSourceEmbed.yaml
-
+```mermaid
+flowchart LR
+  a[user visits repo] --> b[user reads README] --> c[user contributes!]
 ```
 
-##### Using the `$ref`
+Since we're using Markdown and you're viewing this file on GitHub :octocat:, using headings (denoted with `#`) will automatically generate a table of contents for the README.md that exists at the root of your repository.
 
-Notice in the complex example above the schema definition itself has `$ref` links to other schemas defined.
+### Example READMEs and Other Resources
+- https://github.com/18F/open-source-guide/blob/18f-pages/pages/making-readmes-readable.md 
+- https://github.com/matiassingers/awesome-readme
+- [GitHub Docs: About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 
-Here is a small excerpt with an example:
 
-```yaml
-defaultPaymentInstrument:
-  $ref: ./PaymentInstrument.yaml
+The following is from [@PurpleBooth's Example README](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+
+---
+
+# Project Title
+
+One Paragraph of project description goes here
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
 ```
 
-The value of the `$ref` is the path to the other schema definition.
+### Installing
 
-You may use `$ref`s to compose schema from other existing schema to avoid duplication.
+A step by step series of examples that tell you how to get a development env running
 
-You will use `$ref`s to reference schema from your path definitions.
+Say what the step will be
 
-#### Editing Schemas
-
-1. Navigate to the `openapi/components/schemas` folder.
-2. Open the file you wish to edit.
-3. Edit.
-
-### Paths
-
-#### Adding a Path
-
-1. Navigate to the `openapi/paths` folder.
-2. Add a new YAML file named like your URL endpoint except replacing `/` with `@` and putting path parameters into curly braces like `{example}`.
-3. Add the path and a ref to it inside of your `openapi.yaml` file inside of the `openapi` folder.
-
-Example addition to the `openapi.yaml` file:
-```yaml
-'/customers/{id}':
-  $ref: './paths/customers@{id}.yaml'
+```
+Give the example
 ```
 
-Here is an example of a YAML file named `customers@{id}.yaml` in the `paths` folder:
+And repeat
 
-```yaml
-get:
-  tags:
-    - Customers
-  summary: Retrieve a list of customers
-  operationId: GetCustomerCollection
-  description: |
-    You can have a markdown description here.
-  parameters:
-    - $ref: ../components/parameters/collectionLimit.yaml
-    - $ref: ../components/parameters/collectionOffset.yaml
-    - $ref: ../components/parameters/collectionFilter.yaml
-    - $ref: ../components/parameters/collectionQuery.yaml
-    - $ref: ../components/parameters/collectionExpand.yaml
-    - $ref: ../components/parameters/collectionFields.yaml
-  responses:
-    '200':
-      description: A list of Customers was retrieved successfully
-      headers:
-        Rate-Limit-Limit:
-          $ref: ../components/headers/Rate-Limit-Limit.yaml
-        Rate-Limit-Remaining:
-          $ref: ../components/headers/Rate-Limit-Remaining.yaml
-        Rate-Limit-Reset:
-          $ref: ../components/headers/Rate-Limit-Reset.yaml
-        Pagination-Total:
-          $ref: ../components/headers/Pagination-Total.yaml
-        Pagination-Limit:
-          $ref: ../components/headers/Pagination-Limit.yaml
-        Pagination-Offset:
-          $ref: ../components/headers/Pagination-Offset.yaml
-      content:
-        application/json:
-          schema:
-            type: array
-            items:
-              $ref: ../components/schemas/Customer.yaml
-        text/csv:
-          schema:
-            type: array
-            items:
-              $ref: ../components/schemas/Customer.yaml
-    '401':
-      $ref: ../components/responses/AccessForbidden.yaml
-  x-code-samples:
-    - lang: PHP
-      source:
-        $ref: ../code_samples/PHP/customers/get.php
-post:
-  tags:
-    - Customers
-  summary: Create a customer (without an ID)
-  operationId: PostCustomer
-  description: Another markdown description here.
-  requestBody:
-    $ref: ../components/requestBodies/Customer.yaml
-  responses:
-    '201':
-      $ref: ../components/responses/Customer.yaml
-    '401':
-      $ref: ../components/responses/AccessForbidden.yaml
-    '409':
-      $ref: ../components/responses/Conflict.yaml
-    '422':
-      $ref: ../components/responses/InvalidDataError.yaml
-  x-code-samples:
-    - lang: PHP
-      source:
-        $ref: ../code_samples/PHP/customers/post.php
+```
+until finished
 ```
 
-You'll see extensive usage of `$ref`s in this example to different types of components including schemas.
+End with an example of getting some data out of the system or using it for a little demo
 
-You'll also notice `$ref`s to code samples.
+## Running the tests
 
-### Code samples
+Explain how to run the automated tests for this system
 
-1. Navigate to the `openapi/code_samples` folder.
-2. Navigate to the `<language>` (e.g. PHP) sub-folder.
-3. Navigate to the `path` folder, and add ref to the code sample.
+### Break down into end to end tests
 
-You can add languages by adding new folders at the appropriate path level.
+Explain what these tests test and why
 
-More details inside the `code_samples` folder README.
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+Links to technologies your project relies on
+
+## Contributing
+
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
