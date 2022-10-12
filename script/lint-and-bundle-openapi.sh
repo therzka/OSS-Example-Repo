@@ -1,3 +1,5 @@
+# This script can be run locally to bundle and lint the OpenAPI spec.
+
 echo "Bundling OpenAPI schema from docs/api_docs"
 
 redocly bundle docs/api_docs/openapi.yaml --output openapi.yml
