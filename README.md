@@ -21,6 +21,12 @@ Note that this repo can also be used as [a template](https://docs.github.com/en/
 - OpenAPI
     - the OpenAPI examples in this repo were generated using Redocly's [create-openapi-repo](https://github.com/Redocly/create-openapi-repo)
 
+## Community Health Files
+
+GitHub allows people viewing your repository to easily access certain Community Health Files via the sidebar if they exist at the root level of your directory: 
+
+![image](https://user-images.githubusercontent.com/7219923/195445919-540c3cdd-7cd3-4167-a9f8-c26949dc5b01.png)
+
 ---
 
 ## About READMEs
