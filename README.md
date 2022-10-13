@@ -6,8 +6,10 @@ Note that this repo can also be used as [a template](https://docs.github.com/en/
 
 ## Examples in this repo:
 - Community Health Files
+    - [README.md](#about-readmes)
     - [LICENSE.md](./LICENSE.md)
     - [CONTRIBUTING.md](./CONTRIBUTING.md)
+    - [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
     - [SUPPORT.md](./SUPPORT.md)
     - [SECURITY.md](./SECURITY.md)
     - [CITATION.md](./CITATION.md)
@@ -25,7 +27,7 @@ Note that this repo can also be used as [a template](https://docs.github.com/en/
 
 GitHub allows people viewing your repository to easily access certain Community Health Files via the sidebar if they exist at the root level of your directory: 
 
-![image](https://user-images.githubusercontent.com/7219923/195445919-540c3cdd-7cd3-4167-a9f8-c26949dc5b01.png)
+<img src="https://user-images.githubusercontent.com/7219923/195491882-5761a685-bdef-4b16-9893-3a3f8a2643be.png" width=500px>
 
 ---
 
@@ -42,7 +44,7 @@ flowchart LR
 
 Since we're using Markdown and you're viewing this file on GitHub :octocat:, using headings (denoted with `#`) will automatically generate a table of contents for the README.md that exists at the root of your repository.
 
-![image](https://user-images.githubusercontent.com/7219923/195419357-33a211b8-fe7a-4ea0-b945-66ac1d2bdd39.png)
+<img width=500px src="https://user-images.githubusercontent.com/7219923/195419357-33a211b8-fe7a-4ea0-b945-66ac1d2bdd39.png">
 
 
 ### Example READMEs and Other Resources
