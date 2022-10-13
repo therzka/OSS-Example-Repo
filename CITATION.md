@@ -11,6 +11,6 @@ See [https://citation-file-format.github.io/](https://citation-file-format.githu
 
 Read [GitHub's documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files) about CITATION files here.
 
-## Related GitHub Actions
+## Useful GitHub Actions
 
 - [cff-validator](https://github.com/marketplace/actions/cff-validator)
